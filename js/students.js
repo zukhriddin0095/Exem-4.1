@@ -52,7 +52,7 @@ let search = "";
 async function getStudentsRow(teacherId = IDteacher) {
   try {
     StudentsRow.innerHTML = `<span class="loader"></span>`;
-    TeacherCount.innerHTML = ``;
+    TeacherCount.innerHTML = '';
     let params = {
       firstName: search,
       sortBy: "birthday",
@@ -77,10 +77,13 @@ async function getStudentsRow(teacherId = IDteacher) {
   }
 }
 
-searchInput.addEventListener("keyup", function () {
-  search = this.value;
-  getStudentsRow();
-});
+function getsearch(){
+  searchInput.addEventListener("keyup", function () {
+    search = this.value;
+    getStudentsRow();
+  });
+}
+getsearch();
 
 getStudentsRow();
 

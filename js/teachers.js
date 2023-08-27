@@ -195,6 +195,7 @@ window.addEventListener("click", async (e) => {
 });
 
 selectTeacher.addEventListener("change", function () {
+  activePage = 1
   married = this.value;
   getTeachersRow();
 });
