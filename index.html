@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/home.min.css" />
+  </head>
+  <body>
+    <section>
+      <div
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+        class="login-box"
+      >
+        <form class="form__git" id="form" action="">
+          <label>Email</label>
+          <input name="email" type="email" />
+          <span
+            ><label>Password</label>
+            <a href="https://github.com/password_reset"
+              >Forgot password?</a
+            ></span
+          >
+          <input name="password" type="password" />
+          <button class="signup" type="submit">Sign in</button>
+        </form>
+      </div>
+    </section>
+
+    <div id="loading">
+      <h1>Nurmatov Zukhirddin</h1>
+      <!-- Color Loader -->
+      <div class="loader">
+        <span></span>
+      </div>
+      <svg>
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="11"
+              result="blur"
+            ></feGaussianBlur>
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+              result="goo"
+            />
+          </filter>
+        </defs>
+      </svg>
+      <!-- Color Loader -->
+    </div>
+
+    <script type="module" defer src="./js/home.js"></script>
+  </body>
+</html>
+
+
+
+
+

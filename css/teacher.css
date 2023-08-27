@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+header {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 115px;
+  z-index: 10;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/123024/menutexture.png);
+  background-position: center top;
+  background-size: auto 200px;
+  background-repeat: repeat-x;
+}
+
+nav {
+  padding: 10px 0;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+@media (max-width: 500px) {
+  .form {
+    flex-direction: column;
+  }
+}
+.form .search-box {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+.form .input-search {
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+  background-color: rgba(105, 103, 103, 0.8470588235);
+  padding-right: 40px;
+  color: #fff;
+}
+.form .input-search::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.form .input-search::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.form .btn-search {
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color: #ffffff;
+  background-color: transparent;
+  pointer-events: painted;
+}
+.form .btn-search:focus ~ .input-search {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+@media (max-width: 450px) {
+  .form .btn-search:focus ~ .input-search {
+    width: 250px;
+  }
+}
+.form .input-search:focus {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+@media (max-width: 450px) {
+  .form {
+    width: 250px;
+  }
+}
+
+.select-add {
+  display: flex;
+  gap: 25px;
+}
+
+.select-teachers {
+  border: 1px solid #afafaf;
+  background: rgba(0, 0, 0, 0.2941176471);
+  color: #fff;
+  outline: none;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: "Noto Sans", sans-serif;
+  cursor: pointer;
+}
+
+.sort-lastName {
+  border: 1px solid #afafaf;
+  background: rgba(0, 0, 0, 0.2941176471);
+  color: #fff;
+  outline: none;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: "Noto Sans", sans-serif;
+  cursor: pointer;
+}
+
+.add-category-btn {
+  background: #000 !important;
+}
+
+.add-teachers {
+  padding: 10px;
+  border-radius: 15px;
+  font-family: "Noto Sans", sans-serif;
+  background: rgba(0, 0, 0, 0.3529411765);
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid #afafaf;
+  outline: none;
+}
+
+.add-student-btn {
+  background: rgba(0, 0, 0, 0.5215686275) !important;
+  color: #afafaf !important;
+}
+
+.select-birhtday {
+  border: 1px solid #afafaf;
+  background: rgba(0, 0, 0, 0.2941176471);
+  color: #fff;
+  outline: none;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: "Noto Sans", sans-serif;
+  cursor: pointer;
+}
+
+.select-teacher {
+  border: 1px solid #afafaf;
+  background: rgba(0, 0, 0, 0.2941176471);
+  color: #fff;
+  outline: none;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: "Noto Sans", sans-serif;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
+.teachers {
+  margin-top: 130px;
+}
+@media (max-width: 500px) {
+  .teachers {
+    margin-top: 200px;
+  }
+}
+.teachers .teacher-count {
+  display: block;
+  padding: 20px;
+  background: rgba(200, 147, 13, 0.6156862745);
+  border: 1px solid #888;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 20px;
+}
+
+.teachers-row {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  gap: 20px;
+}
+@media (max-width: 1000px) {
+  .teachers-row {
+    grid-template-columns: repeat(3, 3fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 750px) {
+  .teachers-row {
+    grid-template-columns: repeat(2, 2fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .teachers-row {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+}
+.teachers-row .card-teachers {
+  display: flex;
+  flex-direction: column;
+}
+.teachers-row .card-teachers .card-img-top {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+.teachers-row .card-teachers .card-body {
+  padding: 15px;
+  background: rgba(136, 136, 136, 0.2588235294);
+  border-radius: 0 0 10px 10px;
+}
+.teachers-row .card-teachers .card-body a {
+  display: block;
+  text-decoration: none;
+}
+
+.teacher-pg {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.teacher-pg .page-item {
+  padding: 8px;
+  background: rgba(248, 4, 4, 0.3647058824);
+  border-radius: 15px;
+}
+.teacher-pg .page-item button {
+  color: #fff;
+}
+.teacher-pg .page-item button:focus {
+  color: #000;
+}
+
+.ring {
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border: 3px solid #3c3c3c;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #fff000;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #fff000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.ring:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid #fff000;
+  border-right: 3px solid #fff000;
+  border-radius: 50%;
+  animation: animateC 2s linear infinite;
+}
+
+.span {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  animation: animate 2s linear infinite;
+}
+
+.span:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff000;
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 20px #fff000;
+}
+
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.form-row .input-data {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.form-row .input-data .label {
+  position: absolute;
+  pointer-events: none;
+  bottom: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.form-row .input-data .input-modal {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4274509804);
+}
+.form-row .input-data .underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+.form-row .input-data .underline::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #3498db;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.input-data input:focus ~ label,
+.input-data input:valid ~ label,
+.textarea textarea:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #3498db;
+}
+
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before,
+.textarea textarea:focus ~ .underline:before,
+.textarea textarea:valid ~ .underline:before {
+  transform: scale(1);
+}

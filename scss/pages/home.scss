@@ -1,0 +1,261 @@
+@use "../global";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: url("../images/2022-rolls-royce.jpeg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: animateBg 5s linear infinite;
+}
+
+@keyframes animateBg {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.login-box {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+  @media (max-width: 420px) {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.form__git {
+  padding: 17px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  width: 308px;
+  height: 220px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  label {
+    color: #fff;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+  }
+  span {
+    display: flex;
+    // align-items: center;
+    gap: 101px;
+    label {
+      color: #fff;
+      font-family: "Noto Sans", sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 21px; /* 150% */
+    }
+    a {
+      color: #0969da;
+      font-family: "Noto Sans", sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px; /* 150% */
+      text-decoration: none;
+    }
+  }
+  input {
+    padding-left: 10px;
+    margin-bottom: 17px;
+    width: 100%;
+    height: 32px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    background: #ffffff26;
+    color: #fff;
+    // box-shadow: 0px 1px 0px 0px rgba(208, 215, 222, 0.2) inset;
+  }
+  .signup {
+    padding: 5px 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    border-radius: 6px;
+    border: 1px solid rgba(27, 31, 36, 0.15);
+    background: #2da44e;
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.03) inset,
+      0px 1px 0px 0px rgba(27, 31, 36, 0.1);
+    cursor: pointer;
+  }
+}
+
+#loading {
+  position: fixed;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(0, 152, 155, 1) 0.1%,
+    rgba(0, 94, 120, 1) 94.2%
+  );
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: 0.5s;
+}
+
+#loading.loading-none {
+  opacity: 0;
+  z-index: -1;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  filter: url("#goo");
+  &:after {
+    content: "";
+    width: 4em;
+    height: 4em;
+    background: #39f;
+    border-radius: 50%;
+    position: absolute;
+    transform: scale(0.5);
+    animation: grow 2s cubic-bezier(0.14, 0.05, 0.55, 0.5) infinite alternate;
+  }
+  span {
+    width: 2em;
+    height: 2em;
+    background: #3b3;
+    border-radius: 50%;
+    margin-right: 2em;
+    position: relative;
+    transform: translateX(7em);
+    animation: move 4s ease-in-out infinite;
+    &:before {
+      content: "";
+      width: 2em;
+      height: 2em;
+      background: #39f;
+      border-radius: 50%;
+      position: absolute;
+      left: 3em;
+      transform: translateX(0em);
+      animation: shrink 2s ease-in-out infinite;
+    }
+    &:after {
+      content: "";
+      width: 2em;
+      height: 2em;
+      background: #f30;
+      border-radius: 50%;
+      position: absolute;
+      right: 3em;
+      transform: translateX(0em);
+      animation: shrink 2s ease-in-out infinite;
+    }
+  }
+}
+@keyframes grow {
+  0% {
+    transform: scale(0.5);
+    background: #f30;
+  }
+  50% {
+    transform: scale(1);
+    background: #3b3;
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateX(7em);
+  }
+  50% {
+    transform: translateX(-5em);
+  }
+}
+@keyframes shrink {
+  0% {
+    transform: translateX(0em);
+  }
+  50% {
+    transform: translateX(-1em);
+  }
+}
+svg {
+  width: 0;
+  height: 0;
+}
+/*Color Loader*/
+
+h1 {
+  color: #fff;
+  font-family: "Noto Sans", sans-serif;
+  text-align: center;
+  margin-bottom: 2em;
+  letter-spacing: 3px;
+
+  position: relative;
+  z-index: 2;
+  &:before {
+    position: absolute;
+    content: "👑";
+    height: 1px;
+    background: linear-gradient(to right, #3b3, #39f, #f30);
+    color: #fff;
+    top: 2.75em;
+    left: 0.75em;
+    width: 2.5em;
+    font-weight: 400;
+    font-variant: small-caps;
+    font-size: 0.5em;
+  }
+  &:after {
+    position: absolute;
+    content: "CRM Project";
+    color: #fff;
+    font-family: "Noto Sans", sans-serif;
+    top: 100%;
+    right: 50%;
+    font-weight: 400;
+    font-variant: small-caps;
+    font-size: 0.5em;
+  }
+}

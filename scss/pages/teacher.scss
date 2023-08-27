@@ -1,0 +1,196 @@
+@use "../global";
+
+.teachers {
+  margin-top: 130px;
+  @media (max-width: 500px) {
+    margin-top: 200px;
+  }
+  .teacher-count {
+    display: block;
+    padding: 20px;
+    background: #c8930d9d;
+    border: 1px solid #888;
+    border-radius: 10px;
+    color: #fff;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 20px;
+  }
+}
+
+.teachers-row {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  gap: 20px;
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(3, 3fr);
+    gap: 20px;
+  }
+  @media (max-width: 750px) {
+    grid-template-columns: repeat(2, 2fr);
+    gap: 20px;
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+  .card-teachers {
+    display: flex;
+    flex-direction: column;
+    .card-img-top {
+      width: 100%;
+      border-radius: 20px 20px 0 0;
+    }
+    .card-body {
+      padding: 15px;
+      background: #88888842;
+      border-radius: 0 0 10px 10px;
+      a {
+        display: block;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.teacher-pg {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  .page-item {
+    padding: 8px;
+    background: #f804045d;
+    border-radius: 15px;
+    button {
+      color: #fff;
+      &:focus {
+        color: #000;
+      }
+    }
+  }
+}
+
+.ring {
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border: 3px solid #3c3c3c;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #fff000;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #fff000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.ring:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid #fff000;
+  border-right: 3px solid #fff000;
+  border-radius: 50%;
+  animation: animateC 2s linear infinite;
+}
+.span {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  animation: animate 2s linear infinite;
+}
+.span:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff000;
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 20px #fff000;
+}
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  .input-data {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    .label {
+      position: absolute;
+      pointer-events: none;
+      bottom: 10px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    .input-modal {
+      border: none;
+      border-bottom: 1px solid #0000006d;
+    }
+    .underline {
+      position: absolute;
+      bottom: 0;
+      height: 2px;
+      width: 100%;
+      &::before {
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 100%;
+        background: #3498db;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+}
+.input-data input:focus ~ label,
+.input-data input:valid ~ label,
+.textarea textarea:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #3498db;
+}
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before,
+.textarea textarea:focus ~ .underline:before,
+.textarea textarea:valid ~ .underline:before {
+  transform: scale(1);
+}

@@ -1,0 +1,151 @@
+header {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 115px;
+  z-index: 10;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/123024/menutexture.png);
+  background-position: center top;
+  background-size: auto 200px;
+  background-repeat: repeat-x;
+}
+
+nav {
+  padding: 10px 0;
+}
+.form {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  @media (max-width: 500px){
+    flex-direction: column;
+  }
+  .search-box {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+  }
+  .input-search {
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all 0.5s ease-in-out;
+    background-color: #696767d8;
+    padding-right: 40px;
+    color: #fff;
+  }
+  .input-search::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
+  .btn-search {
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color: #ffffff;
+    background-color: transparent;
+    pointer-events: painted;
+  }
+  .btn-search:focus ~ .input-search {
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+    @media (max-width: 450px) {
+      width: 250px;
+    }
+  }
+  .input-search:focus {
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+  }
+  @media (max-width: 450px) {
+    width: 250px;
+  }
+}
+
+.select-add {
+  display: flex;
+  gap: 25px;
+}
+
+.select-teachers{
+  border: 1px solid #afafaf;
+  background: #0000004b;
+  color: #fff;
+  outline: none;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: "Noto Sans", sans-serif;
+  cursor: pointer;
+}
+.sort-lastName {
+   border: 1px solid #afafaf;
+  background: #0000004b;
+  color: #fff;
+  outline: none;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: "Noto Sans", sans-serif;
+  cursor: pointer;
+}
+.add-category-btn {
+  background: #000  !important;
+}
+.add-teachers {
+  padding: 10px;
+  border-radius: 15px;
+  font-family: "Noto Sans", sans-serif;
+  background: #0000005a;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid #afafaf;
+  outline: none;
+}
+
+
+.add-student-btn {
+  background: #00000085 !important;
+  color: #afafaf !important;
+}
+
+.select-birhtday {
+  border: 1px solid #afafaf;
+  background: #0000004b;
+  color: #fff;
+  outline: none;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: "Noto Sans", sans-serif;
+  cursor: pointer;
+}
+.select-teacher {
+  border: 1px solid #afafaf;
+  background: #0000004b;
+  color: #fff;
+  outline: none;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: "Noto Sans", sans-serif;
+  cursor: pointer;
+}
