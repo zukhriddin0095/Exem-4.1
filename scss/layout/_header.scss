@@ -1,6 +1,7 @@
 header {
+  // padding: 30px 0;
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -37,7 +38,7 @@ nav {
     outline: none;
     border-radius: 25px;
     transition: all 0.5s ease-in-out;
-    background-color: #696767d8;
+    background-color: #69676793;
     padding-right: 40px;
     color: #fff;
   }

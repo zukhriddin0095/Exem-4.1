@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 header {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -45,7 +45,7 @@ nav {
   outline: none;
   border-radius: 25px;
   transition: all 0.5s ease-in-out;
-  background-color: rgba(105, 103, 103, 0.8470588235);
+  background-color: rgba(105, 103, 103, 0.5764705882);
   padding-right: 40px;
   color: #fff;
 }

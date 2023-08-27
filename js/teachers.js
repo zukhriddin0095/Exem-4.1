@@ -56,8 +56,8 @@ async function getTeachersRow() {
       firstname: search,
       page: activePage,
       limit: LIMIT,
-      // sortBy: "lastName",
-      // order: nameOrder,
+      sortBy: "lastName",
+      order: nameOrder,
     };
     //  with search
 
@@ -196,8 +196,8 @@ selectTeacher.addEventListener("change", function () {
   getTeachersRow();
 });
 
-// SortLastName.addEventListener("change", function () {
-//   let res = SortLastName.value;
-//   nameOrder = res === "asc" ? "asc" : res === "desc" ? "desc" : "";
-//   getTeachersRow();
-// });
+SortLastName.addEventListener("change", function () {
+  let res = SortLastName.value;
+  nameOrder = res === "asc" ? "asc" : res === "desc" ? "desc" : "";
+  getTeachersRow();
+});
