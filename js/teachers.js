@@ -12,12 +12,16 @@ const teacherModal = document.querySelector("#category-modal");
 const students = document.querySelector(".Students");
 const selectTeacher = document.querySelector(".select-teachers");
 const SortLastName = document.querySelector(".sort-lastName");
-
+const btnsearch = document.querySelector(".btn-search");
 let selected = null;
 let search = "";
 let activePage = 1;
 let married;
 let nameOrder;
+
+btnsearch.addEventListener("click", (e) => {
+  e.preventDefault();
+});
 
 function getTeachersCard({
   firstname,
@@ -96,14 +100,13 @@ async function getTeachersRow() {
     TeacherCount.textContent = `Total: ${data.length}`;
     teachersRow.innerHTML = "";
 
-    if(data.length === 0) {
-    TeacherCount.textContent = `No Teachers`;
-    }else {
+    if (data.length === 0) {
+      TeacherCount.textContent = `No Teachers`;
+    } else {
       TeachersAll.map((res) => {
         teachersRow.innerHTML += getTeachersCard(res);
       });
     }
-
   } catch (err) {
     console.log(err);
   }

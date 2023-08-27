@@ -11,6 +11,11 @@ const SaveStudent = document.querySelector(".add-save-student-btn");
 const teacherModal = document.querySelector("#category-modal");
 const selectteacher = document.querySelector(".select-birhtday");
 const selectTeacherFilter = document.querySelector(".select-teacher");
+const btnsearch = document.querySelector(".btn-search");
+
+btnsearch.addEventListener("click", (e) => {
+  e.preventDefault();
+});
 
 let age = "";
 let selected = null;

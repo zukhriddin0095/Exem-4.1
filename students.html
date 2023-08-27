@@ -30,8 +30,7 @@
             </div>
             <div class="darklight"></div>
             <div class="select-add">
-              <select class="select-teacher">
-              </select>
+              <select class="select-teacher"></select>
               <select class="select-birhtday">
                 <option value="asc">old man</option>
                 <option value="desc">young ones</option>
@@ -60,116 +59,103 @@
       </section>
     </main>
 
-    <footer>
-      <!-- modal -->
-      <div class="modal fade" id="category-modal">
-        <div class="modal-dialog">
-          <form class="g-3 student-form" novalidate>
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">
-                  teachers
-                </h1>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
+    <div class="modal fade" id="category-modal">
+      <div class="modal-dialog">
+        <form class="g-3 student-form" novalidate>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">teachers</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
 
-              <div class="modal-body">
-                <div class="mb-3">
-                  <label for="firstname" class="form-label">first Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="firstname"
-                    required
-                  />
-                  <div class="valid-feedback">Looks good!</div>
-                  <div class="invalid-feedback">Please fill!</div>
-                </div>
-                <div class="mb-3">
-                  <label for="lastName" class="form-label">last Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="lastName"
-                    required
-                  />
-                  <div class="valid-feedback">Looks good!</div>
-                </div>
-                <div class="mb-3">
-                  <label for="phoneNumber" class="form-label"
-                    >phone Number</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="phoneNumber"
-                    required
-                  />
-                  <div class="valid-feedback">Looks good!</div>
-                  <div class="invalid-feedback">Please fill!</div>
-                </div>
-                <div class="mb-3">
-                  <label for="birthday" class="form-label">birthday</label>
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="birthday"
-                    required
-                  />
-                  <div class="valid-feedback">Looks good!</div>
-                </div>
-                <div class="mb-3">
-                  <label for="image" class="form-label">Photos</label>
-                  <input type="url" class="form-control" id="image" required />
-                  <div class="valid-feedback">Looks good!</div>
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">email</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    required
-                  />
-                  <div class="valid-feedback">Looks good!</div>
-                </div>
-                <div class="mb-3 col-4 d-flex gap-2 align-items-baseline">
-                  <label for="isMarried" class="form-label">isMarried</label>
-                  <input type="checkbox" id="isMarried" />
-                  <div class="valid-feedback">Looks good!</div>
-                </div>
-                <div class="mb-3 col-4 d-flex gap-2 align-items-baseline">
-                  <label for="isWork" class="form-label">isWork</label>
-                  <input type="checkbox" id="isWork" />
-                  <div class="valid-feedback">Looks good!</div>
-                </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="firstname" class="form-label">first Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstname"
+                  required
+                />
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please fill!</div>
               </div>
-
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button
-                  type="submit"
-                  class="btn btn-primary add-save-student-btn"
-                >
-                  Add category
-                </button>
+              <div class="mb-3">
+                <label for="lastName" class="form-label">last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  required
+                />
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="mb-3">
+                <label for="phoneNumber" class="form-label">phone Number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="phoneNumber"
+                  required
+                />
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please fill!</div>
+              </div>
+              <div class="mb-3">
+                <label for="birthday" class="form-label">birthday</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="birthday"
+                  required
+                />
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="mb-3">
+                <label for="image" class="form-label">Photos</label>
+                <input type="url" class="form-control" id="image" required />
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">email</label>
+                <input type="email" class="form-control" id="email" required />
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="mb-3 col-4 d-flex gap-2 align-items-baseline">
+                <label for="isMarried" class="form-label">isMarried</label>
+                <input type="checkbox" id="isMarried" />
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="mb-3 col-4 d-flex gap-2 align-items-baseline">
+                <label for="isWork" class="form-label">isWork</label>
+                <input type="checkbox" id="isWork" />
+                <div class="valid-feedback">Looks good!</div>
               </div>
             </div>
-          </form>
-        </div>
+
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="submit"
+                class="btn btn-primary add-save-student-btn"
+              >
+                Add category
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
-      <!-- modal -->
-    </footer>
+    </div>
   </body>
 </html>
